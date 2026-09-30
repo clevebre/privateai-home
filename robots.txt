@@ -1,0 +1,5 @@
+# privateai.ltd
+User-agent: *
+Allow: /
+
+Sitemap: https://privateai.ltd/sitemap.xml

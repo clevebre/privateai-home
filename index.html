@@ -1,66 +1,225 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MindToo is coming soon · privateai.ltd</title>
-<meta name="description" content="MindToo: one private memory for all your AI assistants, on your own computer. Coming soon from brooke.ltd, Belfast.">
-<link rel="icon" href="icon.png">
-<meta property="og:title" content="MindToo is coming soon">
-<meta property="og:description" content="One private memory for all your AI assistants, on your own computer.">
-<meta property="og:image" content="icon.png">
-<style>
-  :root { --deep: #110c26; --deep-2: #231a52; --ink: #f2effa; --muted: #b9b1d6; --violet: #9d86ff; --gold: #f1d27a; --gold-2: #c9a227; }
-  * { box-sizing: border-box; }
-  html { background: #110c26; }
-  body { margin: 0; color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: radial-gradient(900px 600px at 50% 18%, #3a2a86 0%, transparent 62%), linear-gradient(170deg, var(--deep-2), var(--deep) 70%);
-    display: flex; flex-direction: column; min-height: 100vh; }
-  main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 56px 20px 32px; }
-  .mark { width: 168px; height: 168px; margin-bottom: 28px; }
-  .mark .ring-a { transform-origin: 206px 256px; animation: drift-a 7s ease-in-out infinite; }
-  .mark .ring-b { transform-origin: 306px 256px; animation: drift-b 7s ease-in-out infinite; }
-  .mark .core { animation: glow 3.5s ease-in-out infinite; }
-  @keyframes drift-a { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
-  @keyframes drift-b { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
-  @keyframes glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
-  @media (prefers-reduced-motion: reduce) { .mark * { animation: none !important; } }
-  .soon { display: inline-block; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
-    border: 1px solid rgba(241, 210, 122, .45); border-radius: 999px; padding: 6px 14px; margin-bottom: 22px; }
-  h1 { font-size: clamp(44px, 8vw, 76px); line-height: 1; margin: 0 0 18px; letter-spacing: -1px; font-weight: 750; }
-  h1 span { background: linear-gradient(90deg, var(--gold), var(--gold-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .tag { font-size: clamp(19px, 2.6vw, 24px); margin: 0 0 14px; font-weight: 500; }
-  .lede { max-width: 34em; color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0 auto 40px; }
-  .points { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)); gap: 16px; justify-content: center; width: 100%; }
-  .point { background: rgba(255, 255, 255, .045); border: 1px solid rgba(255, 255, 255, .09); border-radius: 14px; padding: 18px 18px 16px; text-align: left; }
-  .point b { display: block; font-size: 16px; margin-bottom: 4px; }
-  .point b i { font-style: normal; color: var(--violet); margin-right: 6px; }
-  .point p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
-  footer { text-align: center; color: var(--muted); font-size: 13.5px; padding: 22px 20px 28px; }
-  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(242, 239, 250, .3); }
-  @media (max-width: 720px) { .points { grid-template-columns: 1fr; max-width: 360px; } .mark { width: 132px; height: 132px; } }
-</style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'inline-speculation-rules'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark light">
+<title>PrivateAI · Private AI that stays yours</title>
+<meta name="description" content="PrivateAI makes AI that stays yours. It works on your own computer and tells you plainly what it does and does not know. From brooke.ltd, Belfast.">
+<link rel="canonical" href="https://privateai.ltd/">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#110c26">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f5fb">
+<link rel="preload" href="/assets/fonts/mona-sans-latin-wdth-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="expect" href="#intro" blocking="render">
+<script type="module" src="/assets/js/site.js"></script>
+<script type="module" src="/assets/js/rings.js"></script>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PrivateAI">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="PrivateAI · Private AI that stays yours">
+<meta property="og:description" content="PrivateAI makes AI that stays yours. It works on your own computer and tells you plainly what it does and does not know. From brooke.ltd, Belfast.">
+<meta property="og:url" content="https://privateai.ltd/">
+<meta property="og:image" content="https://privateai.ltd/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PrivateAI: private AI that stays yours. The violet and gold rings on deep ink.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
 </head>
 <body>
-<main>
-  <svg class="mark" viewBox="0 0 512 512" role="img" aria-label="MindToo">
-    <defs>
-      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d27a"/><stop offset="1" stop-color="#c9a227"/></linearGradient>
-    </defs>
-    <circle class="ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/>
-    <circle class="ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#g)" stroke-width="28"/>
-    <circle class="core" cx="256" cy="256" r="20" fill="#ffffff"/>
-  </svg>
-  <div class="soon">Coming soon</div>
-  <h1>Mind<span>Too</span></h1>
-  <p class="tag">One private memory for all your AI assistants.</p>
-  <p class="lede">Your assistants forget you every time a conversation ends. MindToo gives them one shared memory that lives on your own computer, and puts you in control of what each of them can see.</p>
-  <div class="points">
-    <div class="point"><b><i>&#9679;</i>Private</b><p>Kept on your computer. Nothing is sent anywhere.</p></div>
-    <div class="point"><b><i>&#9679;</i>Shared</b><p>Claude, Codex, Cursor and Gemini remember together.</p></div>
-    <div class="point"><b><i>&#9679;</i>Yours</b><p>See everything it keeps, and decide who sees what.</p></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner wrap">
+    <a class="brand" href="/" aria-current="page">
+      <svg class="mark mark--header" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><defs><linearGradient id="ring-gold-header" x1="0" y1="0" x2="1" y2="1"><stop class="mark__stop-a" offset="0" stop-color="#f1d27a"/><stop class="mark__stop-b" offset="1" stop-color="#c9a227"/></linearGradient></defs><circle class="mark__ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/><circle class="mark__ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#ring-gold-header)" stroke-width="28"/><circle class="mark__core" cx="256" cy="256" r="20" fill="#ffffff"/></svg>
+      <span class="wordmark">Private<span class="gild">AI</span></span>
+    </a>
+    <button class="menu-button" type="button" popovertarget="site-nav">
+      <span class="menu-button__icon" aria-hidden="true"></span>
+      <span class="menu-button__label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" popover aria-label="Main">
+      <ul role="list">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/principles/">Principles</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero intro" id="intro" aria-labelledby="page-title">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">From brooke.ltd, Belfast</p>
+      <h1 id="page-title">Private AI that stays <em class="gild">yours</em>.</h1>
+      <p class="lede">PrivateAI makes AI that works on your own computer, answers to you, and tells you plainly what it does and does not know.</p>
+      <div class="actions">
+        <a class="button button--primary" href="/principles/">Our principles</a>
+        <a class="button" href="/products/">The portfolio</a>
+      </div>
+    </div>
+    <div class="hero__art art">
+      <div class="stage">
+        <div class="field" data-rings data-mode="field" data-mark-scale="0.5" data-seed="1609" aria-hidden="true"></div>
+        <!-- The holding page's mark and its animation, ported exactly (reference/holding-page/index.html). -->
+        <svg class="hold-mark" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="hold-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d27a"/><stop offset="1" stop-color="#c9a227"/></linearGradient>
+          </defs>
+          <circle class="ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/>
+          <circle class="ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#hold-g)" stroke-width="28"/>
+          <circle class="core" cx="256" cy="256" r="20" fill="#ffffff"/>
+        </svg>
+      </div>
+      <label class="motion-toggle">
+        <input class="visually-hidden" type="checkbox" data-motion-pause>
+        <span class="motion-toggle__box" aria-hidden="true"></span>
+        <span>Pause motion</span>
+      </label>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="private-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">What private means here</p>
+      <h2 id="private-title">What we hold to.</h2>
+    </header>
+    <div class="points">
+      <ul class="points__list" role="list">
+        <li class="point reveal">
+          <h3>Private</h3>
+          <p>Private by default and local first. Your AI works on your own computer.</p>
+        </li>
+        <li class="point reveal">
+          <h3>Honest</h3>
+          <p>It says when it does not know, rather than guessing.</p>
+        </li>
+        <li class="point reveal">
+          <h3>Yours</h3>
+          <p>You own your data. Only you delete it, and you can export it at any time.</p>
+        </li>
+      </ul>
+    </div>
+    <p class="more"><a href="/principles/">All five principles</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="first-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">First from PrivateAI</p>
+      <h2 id="first-title">The start of a portfolio.</h2>
+    </header>
+    <article class="product-card product-card--mindtoo reveal" aria-labelledby="mindtoo-name">
+      <div class="product-card__inner">
+        <svg class="mark mark--product-home" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><defs><linearGradient id="ring-gold-product-home" x1="0" y1="0" x2="1" y2="1"><stop class="mark__stop-a" offset="0" stop-color="#f1d27a"/><stop class="mark__stop-b" offset="1" stop-color="#c9a227"/></linearGradient></defs><circle class="mark__ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/><circle class="mark__ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#ring-gold-product-home)" stroke-width="28"/><circle class="mark__core" cx="256" cy="256" r="20" fill="#ffffff"/></svg>
+        <div>
+          <p class="pill">Coming soon</p>
+          <h3 class="product-card__name wordmark" id="mindtoo-name">Mind<span class="gild">Too</span></h3>
+          <p class="tagline">One private memory for all your AI assistants.</p>
+        </div>
+      </div>
+    </article>
+    <p class="more"><a href="/products/">Products, and what follows</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-title">
+  <div class="wrap split">
+    <div class="split__inner">
+      <header class="section-head">
+        <p class="eyebrow">Built on published work</p>
+        <h2 id="work-title">The thinking behind it.</h2>
+        <p class="lede">PrivateAI stands on the research and writing of its founder, Brooke Tamsin Clevenger, an independent researcher at brooke.ltd.</p>
+      </header>
+      <div class="reveal">
+        <ul class="mini-works" role="list">
+          <li><span class="year">2025</span><span><cite>A Practical Methodology for the Stochastic Optimisation of Multi-Agent Agentic Workflows</cite></span></li>
+          <li><span class="year">2025</span><span><cite>The Harmonic Economy</cite></span></li>
+          <li><span class="year">2024</span><span>The <cite>Becoming OK</cite>, <cite>Not OK?</cite> and <cite>Everything’s OK</cite> books</span></li>
+        </ul>
+        <p class="more"><a href="/research/">Research and writing</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="vital-title">
+  <h2 class="visually-hidden" id="vital-title">A guiding principle</h2>
+  <figure class="quote wrap reveal">
+    <blockquote><p>Go vital, not viral.</p></blockquote>
+    <figcaption>Enduring connection over fleeting attention. Brooke’s guiding principle.</figcaption>
+  </figure>
+</section>
+
+<section class="section" aria-labelledby="about-title">
+  <div class="wrap split">
+    <div class="split__inner">
+      <header class="section-head">
+        <p class="eyebrow">Part of brooke.ltd</p>
+        <h2 id="about-title">Human-led, and made in Belfast.</h2>
+      </header>
+      <div class="stack reveal">
+        <p>PrivateAI is part of <a href="https://brooke.ltd" rel="noreferrer">brooke.ltd</a>, an independent creative and publishing ecosystem based in Belfast. Its tagline is Learn, Think, Discover.</p>
+        <p class="muted">The work is human-led. Brooke works with a constellation of intelligences as her council, under her own ethical method, Sevahem.</p>
+        <p class="more"><a href="/about/">About PrivateAI</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="contact-title">
+  <div class="wrap">
+    <h2 class="visually-hidden" id="contact-title">Contact</h2>
+    <p class="lede">Questions about PrivateAI? Write to <a href="mailto:support@privateai.ltd">support@privateai.ltd</a>.</p>
+  </div>
+</section>
 </main>
-<footer>privateai.ltd · Made in Belfast by <a href="https://brooke.ltd">brooke.ltd</a></footer>
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="brand" href="/">
+        <svg class="mark mark--footer" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><defs><linearGradient id="ring-gold-footer" x1="0" y1="0" x2="1" y2="1"><stop class="mark__stop-a" offset="0" stop-color="#f1d27a"/><stop class="mark__stop-b" offset="1" stop-color="#c9a227"/></linearGradient></defs><circle class="mark__ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/><circle class="mark__ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#ring-gold-footer)" stroke-width="28"/><circle class="mark__core" cx="256" cy="256" r="20" fill="#ffffff"/></svg>
+        <span class="wordmark">Private<span class="gild">AI</span></span>
+      </a>
+      <p>Private AI that stays yours.</p>
+    </div>
+    <nav class="site-footer__nav" aria-labelledby="footer-explore">
+      <h2 class="site-footer__heading" id="footer-explore">Explore</h2>
+      <ul role="list">
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/principles/">Principles</a></li>
+        <li><a href="/research/">Research and writing</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </nav>
+    <nav class="site-footer__nav" aria-labelledby="footer-details">
+      <h2 class="site-footer__heading" id="footer-details">Details</h2>
+      <ul role="list">
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/legal/">Legal</a></li>
+        <li><a href="/family/">The wider family</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap site-footer__base">
+    <p>privateai.ltd · Made in Belfast by <a href="https://brooke.ltd" rel="noreferrer">brooke.ltd</a></p>
+    <p>© 2026 privateai.ltd, part of brooke.ltd</p>
+    <p><a href="/privacy/">This site collects nothing.</a></p>
+  </div>
+</footer>
 </body>
 </html>
