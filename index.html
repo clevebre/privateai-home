@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindToo is coming soon · privateai.ltd</title>
+<meta name="description" content="MindToo: one private memory for all your AI assistants, on your own computer. Coming soon from brooke.ltd, Belfast.">
+<link rel="icon" href="icon.png">
+<meta property="og:title" content="MindToo is coming soon">
+<meta property="og:description" content="One private memory for all your AI assistants, on your own computer.">
+<meta property="og:image" content="icon.png">
+<style>
+  :root { --deep: #110c26; --deep-2: #231a52; --ink: #f2effa; --muted: #b9b1d6; --violet: #9d86ff; --gold: #f1d27a; --gold-2: #c9a227; }
+  * { box-sizing: border-box; }
+  html { background: #110c26; }
+  body { margin: 0; color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: radial-gradient(900px 600px at 50% 18%, #3a2a86 0%, transparent 62%), linear-gradient(170deg, var(--deep-2), var(--deep) 70%);
+    display: flex; flex-direction: column; min-height: 100vh; }
+  main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 56px 20px 32px; }
+  .mark { width: 168px; height: 168px; margin-bottom: 28px; }
+  .mark .ring-a { transform-origin: 206px 256px; animation: drift-a 7s ease-in-out infinite; }
+  .mark .ring-b { transform-origin: 306px 256px; animation: drift-b 7s ease-in-out infinite; }
+  .mark .core { animation: glow 3.5s ease-in-out infinite; }
+  @keyframes drift-a { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+  @keyframes drift-b { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
+  @keyframes glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+  @media (prefers-reduced-motion: reduce) { .mark * { animation: none !important; } }
+  .soon { display: inline-block; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
+    border: 1px solid rgba(241, 210, 122, .45); border-radius: 999px; padding: 6px 14px; margin-bottom: 22px; }
+  h1 { font-size: clamp(44px, 8vw, 76px); line-height: 1; margin: 0 0 18px; letter-spacing: -1px; font-weight: 750; }
+  h1 span { background: linear-gradient(90deg, var(--gold), var(--gold-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .tag { font-size: clamp(19px, 2.6vw, 24px); margin: 0 0 14px; font-weight: 500; }
+  .lede { max-width: 34em; color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0 auto 40px; }
+  .points { display: grid; grid-template-columns: repeat(3, minmax(0, 220px)); gap: 16px; justify-content: center; width: 100%; }
+  .point { background: rgba(255, 255, 255, .045); border: 1px solid rgba(255, 255, 255, .09); border-radius: 14px; padding: 18px 18px 16px; text-align: left; }
+  .point b { display: block; font-size: 16px; margin-bottom: 4px; }
+  .point b i { font-style: normal; color: var(--violet); margin-right: 6px; }
+  .point p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+  footer { text-align: center; color: var(--muted); font-size: 13.5px; padding: 22px 20px 28px; }
+  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(242, 239, 250, .3); }
+  @media (max-width: 720px) { .points { grid-template-columns: 1fr; max-width: 360px; } .mark { width: 132px; height: 132px; } }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="0 0 512 512" role="img" aria-label="MindToo">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d27a"/><stop offset="1" stop-color="#c9a227"/></linearGradient>
+    </defs>
+    <circle class="ring-a" cx="206" cy="256" r="118" fill="none" stroke="#9d86ff" stroke-width="28"/>
+    <circle class="ring-b" cx="306" cy="256" r="118" fill="none" stroke="url(#g)" stroke-width="28"/>
+    <circle class="core" cx="256" cy="256" r="20" fill="#ffffff"/>
+  </svg>
+  <div class="soon">Coming soon</div>
+  <h1>Mind<span>Too</span></h1>
+  <p class="tag">One private memory for all your AI assistants.</p>
+  <p class="lede">Your assistants forget you every time a conversation ends. MindToo gives them one shared memory that lives on your own computer, and puts you in control of what each of them can see.</p>
+  <div class="points">
+    <div class="point"><b><i>&#9679;</i>Private</b><p>Kept on your computer. Nothing is sent anywhere.</p></div>
+    <div class="point"><b><i>&#9679;</i>Shared</b><p>Claude, Codex, Cursor and Gemini remember together.</p></div>
+    <div class="point"><b><i>&#9679;</i>Yours</b><p>See everything it keeps, and decide who sees what.</p></div>
+  </div>
+</main>
+<footer>privateai.ltd · Made in Belfast by <a href="https://brooke.ltd">brooke.ltd</a></footer>
+</body>
+</html>
